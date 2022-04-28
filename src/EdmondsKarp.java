@@ -29,6 +29,9 @@ public class EdmondsKarp {
         aPath = new int[MAX_SIZE];
 
         N = Integer.parseInt(br.readLine());
+
+        long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
+
         for(int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             int start = charToInt(st.nextToken().charAt(0));
@@ -77,5 +80,9 @@ public class EdmondsKarp {
         }
 
         System.out.println(maxFlow);
+
+        long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+        long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
+        System.out.println("running time : "+secDiffTime + "ms");
     }
 }
