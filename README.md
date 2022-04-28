@@ -60,7 +60,8 @@ S->3->T증가경로를 찾아 냈으므로 잔여용량중 최솟값인 1만큼 
 시간복잡도는 `O((V+E)F)`인데, E>V로 지배적이기 때문에 보통 `O(EF)`라고 표현한다.  
 
 ### 실행결과  
-![](https://user-images.githubusercontent.com/101320758/165711078-145344fe-7506-473d-b5fc-1711ec6ac26c.png)  
+![](https://user-images.githubusercontent.com/101320758/165711078-145344fe-7506-473d-b5fc-1711ec6ac26c.png) 
+![](https://user-images.githubusercontent.com/101320758/165722909-94ee6a33-fea0-46f7-acdf-4fa5b2d3da2f.png)  
   
 # EdmondsKarp  
 최대 유량 알고리즘에 대해 공부하던 도중 탐색방법에 따라 FordFulkerson 알고리즘, EdmondsKarp 알고리즘으로 분류된다.  
@@ -84,7 +85,8 @@ BFS방식으로 탐색하기 때문에 가장 짧은 경로의 증가 경로를 
 따라서 d가 증가하여야만 다시 이 간선을 참조하게된다. 최단 경로를 고정했을 때 `O(E)`개의 경로만을 찾게 되고, 최단 경로의 길이는 길어봐야 V로 최대 V개의 길이를 가지게 되므로 최대 `O(VE^2)`가 소요된다.  
 
 ### 실행결과  
-![](https://user-images.githubusercontent.com/101320758/165711198-a038a79a-feb5-49a6-81a0-4a72e49aa27c.png)  
+![](https://user-images.githubusercontent.com/101320758/165711198-a038a79a-feb5-49a6-81a0-4a72e49aa27c.png) 
+![](https://user-images.githubusercontent.com/101320758/165722926-65e0180a-b018-4221-a64f-082bf8f2dbc6.png)  
   
 ## Review  
 이번에 `FordFulkerson` 알고리즘에대해 공부하면서 유량이 흐르는데 어떻게 흐르고 동작하는데 이해하는 것이 처음에는 쉽지않았다. 그래도 공부하다가 한번 동작방식에 대해 이해하고나니 탐색방법만 다른 `EdmondsKarp` 알고리즘을 이해하는데 어렵지 않았다.  
