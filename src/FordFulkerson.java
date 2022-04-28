@@ -59,7 +59,7 @@ public class FordFulkerson {
 
         N = Integer.parseInt(br.readLine());    //값이 숫자인 문자열을 인자 값을 정수로 변환
 
-        long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
+        long startTime = System.nanoTime();
 
         for(int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -84,9 +84,8 @@ public class FordFulkerson {
 
         System.out.println(maxFlow);
 
-        long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
-        long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
-        System.out.println("running time : "+secDiffTime + "ms");
+        long endTime = System.nanoTime();
+        System.out.println("running time : " + (endTime - startTime) + " ns");
     }
 }
 
